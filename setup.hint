@@ -1,0 +1,7 @@
+category: Gnome Text
+requires: cygwin eel2 libaspell15 libtranslate xorg-x11-base
+sdesc: "GNOME natural language translator"
+ldesc: "GNOME Translate is a natural language translator. It can
+translate a text or web page between several natural
+languages, and it can automatically detect the source language
+as you type."

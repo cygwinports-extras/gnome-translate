@@ -1,0 +1,169 @@
+diff -urN -x .build -x .inst -x .sinst -x configure -x 'Makefile.in*' -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x 'intltool*' -x autom4te.cache -x '*compile' -x '*stamp' -x '*html' -x '*sgml' -x '*tmpl' -x '*txt' -x '*xml' gnome-translate-0.99-orig/CYGWIN-PATCHES/README gnome-translate-0.99/CYGWIN-PATCHES/README
+--- gnome-translate-0.99-orig/CYGWIN-PATCHES/README	1969-12-31 18:00:00.000000000 -0600
++++ gnome-translate-0.99/CYGWIN-PATCHES/README	2006-01-04 14:46:55.671875000 -0600
+@@ -0,0 +1,96 @@
++gnome-translate
++------------------------------------------
++GNOME Translate is a natural language translator. It can
++translate a text or web page between several natural
++languages, and it can automatically detect the source language
++as you type.
++
++Runtime requirements:
++  cygwin-1.5.18-1
++  eel2-2.12.2-1
++  libaspell15-0.50.3-1
++  libtranslate-0.99-1
++
++Build requirements:
++(besides corresponding -devel packages)
++  cygwin-1.5.18-1
++  autoconf2.5-2.59-3
++  automake1.9-1.9.6-1
++  binutils-20050610-1
++  gawk-3.1.5-1
++  gcc-core-3.4.4-1
++  intltool-0.33-1
++  make-3.80-1
++  pkgconfig-0.17.2-2
++  sed-4.1.4-1
++
++Canonical website:
++  http://www.nongnu.org/libtranslate/gnome-translate/
++
++Canonical download:
++  http://savannah.nongnu.org/download/libtranslate/
++
++-------------------------------------------
++
++Build instructions:
++  unpack gnome-translate-0.99-X-src.tar.bz2
++    if you use setup to install this src package, it will be
++	 unpacked under /usr/src automatically
++  cd /usr/src
++  ./gnome-translate-0.99-X.sh all
++
++This will create:
++  /usr/src/gnome-translate-0.99-X-src.tar.bz2
++  /usr/src/gnome-translate-0.99-X.tar.bz2
++
++-------------------------------------------
++
++Files included in the binary package:
++
++  /etc/gconf/schemas/gnome-translate.schemas
++  /etc/postinstall/gnome-translate.sh
++  /etc/preremove/gnome-translate.sh
++  /usr/bin/gnome-translate.exe
++  /usr/share/applications/gnome-translate.desktop
++  /usr/share/doc/Cygwin/gnome-translate-0.99.README
++  /usr/share/doc/gnome-translate-0.99/AUTHORS
++  /usr/share/doc/gnome-translate-0.99/COPYING
++  /usr/share/doc/gnome-translate-0.99/INSTALL
++  /usr/share/doc/gnome-translate-0.99/NEWS
++  /usr/share/doc/gnome-translate-0.99/README
++  /usr/share/doc/gnome-translate-0.99/TODO
++  /usr/share/gnome/help/gnome-translate/C/documentation-license.xml
++  /usr/share/gnome/help/gnome-translate/C/figures/main-window.png
++  /usr/share/gnome/help/gnome-translate/C/gnome-translate.xml
++  /usr/share/gnome/help/gnome-translate/C/software-license.xml
++  /usr/share/gnome-translate/ui/app.glade
++  /usr/share/gnome-translate/ui/edit-toolbars.glade
++  /usr/share/gnome-translate/ui/hand-open.png
++  /usr/share/gnome-translate/ui/logo.png
++  /usr/share/gnome-translate/ui/menus.xml
++  /usr/share/gnome-translate/ui/preferences.glade
++  /usr/share/gnome-translate/ui/toolbars.xml
++  /usr/share/gnome-translate/ui/translate-web-page.glade
++  /usr/share/icons/hicolor/16x16/apps/gnome-translate-web-page.png
++  /usr/share/icons/hicolor/16x16/apps/gnome-translate.png
++  /usr/share/icons/hicolor/24x24/apps/gnome-translate-web-page.png
++  /usr/share/icons/hicolor/24x24/apps/gnome-translate.png
++  /usr/share/icons/hicolor/32x32/apps/gnome-translate-swap-panes.png
++  /usr/share/icons/hicolor/32x32/apps/gnome-translate-web-page.png
++  /usr/share/icons/hicolor/32x32/apps/gnome-translate.png
++  /usr/share/icons/hicolor/48x48/apps/gnome-translate-web-page.png
++  /usr/share/icons/hicolor/48x48/apps/gnome-translate.png
++  /usr/share/locale/fr/LC_MESSAGES/gnome-translate.mo
++  /usr/share/omf/gnome-translate/gnome-translate-C.omf
++  /usr/share/pixmaps/gnome-translate.png
++
++------------------
++
++Port Notes:
++
++----- version 0.99-1 -----
++Initial release for Cygwin.
++
++
++Cygwin port maintained by:
++http://cygwinports.dotsrc.org/
+diff -urN -x .build -x .inst -x .sinst -x configure -x 'Makefile.in*' -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x 'intltool*' -x autom4te.cache -x '*compile' -x '*stamp' -x '*html' -x '*sgml' -x '*tmpl' -x '*txt' -x '*xml' gnome-translate-0.99-orig/CYGWIN-PATCHES/setup.hint gnome-translate-0.99/CYGWIN-PATCHES/setup.hint
+--- gnome-translate-0.99-orig/CYGWIN-PATCHES/setup.hint	1969-12-31 18:00:00.000000000 -0600
++++ gnome-translate-0.99/CYGWIN-PATCHES/setup.hint	2006-01-04 14:46:55.671875000 -0600
+@@ -0,0 +1,7 @@
++category: Gnome Text
++requires: cygwin eel2 libaspell15 libtranslate xorg-x11-base
++sdesc: "GNOME natural language translator"
++ldesc: "GNOME Translate is a natural language translator. It can
++translate a text or web page between several natural
++languages, and it can automatically detect the source language
++as you type."
+diff -urN -x .build -x .inst -x .sinst -x configure -x 'Makefile.in*' -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x 'intltool*' -x autom4te.cache -x '*compile' -x '*stamp' -x '*html' -x '*sgml' -x '*tmpl' -x '*txt' -x '*xml' gnome-translate-0.99-orig/Makefile.am gnome-translate-0.99/Makefile.am
+--- gnome-translate-0.99-orig/Makefile.am	2005-01-11 12:57:04.000000000 -0600
++++ gnome-translate-0.99/Makefile.am	2006-01-04 14:34:02.078125000 -0600
+@@ -1,3 +1,5 @@
++ACLOCAL_AMFLAGS = -I m4
++
+ SUBDIRS = art data help m4 po src ui
+ 
+ EXTRA_DIST = \
+diff -urN -x .build -x .inst -x .sinst -x configure -x 'Makefile.in*' -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x 'intltool*' -x autom4te.cache -x '*compile' -x '*stamp' -x '*html' -x '*sgml' -x '*tmpl' -x '*txt' -x '*xml' gnome-translate-0.99-orig/help/C/gnome-translate-C.omf.out gnome-translate-0.99/help/C/gnome-translate-C.omf.out
+--- gnome-translate-0.99-orig/help/C/gnome-translate-C.omf.out	1969-12-31 18:00:00.000000000 -0600
++++ gnome-translate-0.99/help/C/gnome-translate-C.omf.out	2006-01-04 14:35:34.906250000 -0600
+@@ -0,0 +1,31 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<!DOCTYPE omf PUBLIC "-//OMF//DTD Scrollkeeper OMF Variant V1.0//EN" "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/scrollkeeper-omf.dtd">
++<omf>
++  <resource>
++    <creator>
++      jylefort@brutele.be (Jean-Yves Lefort)
++    </creator>
++    <maintainer>
++      jylefort@brutele.be (Jean-Yves Lefort)
++    </maintainer>
++    <title>
++      GNOME Translate Manual
++    </title>
++    <date>
++      2005-01-11
++    </date>
++    <version identifier="2.0" date="2005-01-11" description="First release"/>
++    <subject category="GNOME|Utilities"/>
++    <description>
++      GNOME Translate Manual
++    </description>
++    <type>
++      user's guide
++    </type>
++    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
++    <identifier url="file:/usr/share/gnome/help/gnome-translate/C/gnome-translate.xml"/>
++    <language code="C"/>
++    <relation seriesid="15ae1e66-6400-11d9-9658-ed120ef36687"/>
++    <rights type="BSD" holder="Jean-Yves Lefort"/>
++  </resource>
++</omf>
+diff -urN -x .build -x .inst -x .sinst -x configure -x 'Makefile.in*' -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x 'intltool*' -x autom4te.cache -x '*compile' -x '*stamp' -x '*html' -x '*sgml' -x '*tmpl' -x '*txt' -x '*xml' gnome-translate-0.99-orig/src/Makefile.am gnome-translate-0.99/src/Makefile.am
+--- gnome-translate-0.99-orig/src/Makefile.am	2005-01-12 11:30:47.000000000 -0600
++++ gnome-translate-0.99/src/Makefile.am	2006-01-04 14:31:18.328125000 -0600
+@@ -46,7 +46,9 @@
+ 	-DGNOMELOCALEDIR="\"$(datadir)/locale\"" \
+ 	-DUIDIR="\"$(pkgdatadir)/ui\"" \
+ 	-DG_LOG_DOMAIN="\"$(PACKAGE)\""
+-AM_LDFLAGS = $(INTLLIBS) $(GNOME_LIBS) $(LIBTRANSLATE_LIBS) $(ASPELL_LIBS)
++
++gnome_translate_LDFLAGS = -Wl,--export-all-symbols
++gnome_translate_LDADD = $(INTLLIBS) $(GNOME_LIBS) $(LIBTRANSLATE_LIBS) $(ASPELL_LIBS)
+ 
+ EXTRA_DIST = eggmarshalers.list
+ MAINTAINERCLEANFILES = $(BUILT_SOURCES)
