@@ -1,0 +1,14 @@
+inherit gnome2
+
+DESCRIPTION="GNOME natural language translator"
+HOMEPAGE="http://www.nongnu.org/libtranslate/gnome-translate/"
+SRC_URI="http://savannah.nongnu.org/download/libtranslate/${P}.tar.gz"
+PATCH_URI="
+	http://patches.ubuntu.com/by-release/extracted/ubuntu/g/${PN}/${PV}-0ubuntu2/01_eel_alert.dpatch
+	0.99-as-needed.patch
+"
+
+DIFF_EXCLUDES="*.omf.out"
+
+ACLOCAL_FLAGS="-I m4"
+CYGCONF_ARGS="--disable-gtktest"

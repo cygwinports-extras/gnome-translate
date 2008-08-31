@@ -1,0 +1,11 @@
+--- origsrc/gnome-translate-0.99/src/Makefile.am	2005-01-12 11:30:47.000000000 -0600
++++ src/gnome-translate-0.99/src/Makefile.am	2008-08-31 04:13:32.394378000 -0500
+@@ -46,7 +46,7 @@
+ 	-DGNOMELOCALEDIR="\"$(datadir)/locale\"" \
+ 	-DUIDIR="\"$(pkgdatadir)/ui\"" \
+ 	-DG_LOG_DOMAIN="\"$(PACKAGE)\""
+-AM_LDFLAGS = $(INTLLIBS) $(GNOME_LIBS) $(LIBTRANSLATE_LIBS) $(ASPELL_LIBS)
++LDADD = $(INTLLIBS) $(GNOME_LIBS) $(LIBTRANSLATE_LIBS) $(ASPELL_LIBS)
+ 
+ EXTRA_DIST = eggmarshalers.list
+ MAINTAINERCLEANFILES = $(BUILT_SOURCES)
