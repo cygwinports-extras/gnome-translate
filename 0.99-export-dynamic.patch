@@ -1,0 +1,11 @@
+--- origsrc/gnome-translate-0.99/src/Makefile.am	2009-09-14 03:03:48.425327000 -0500
++++ src/gnome-translate-0.99/src/Makefile.am	2009-09-14 03:12:43.439751900 -0500
+@@ -48,6 +48,8 @@ AM_CPPFLAGS = $(WARN_CFLAGS) $(GNOME_CFL
+ 	-DG_LOG_DOMAIN="\"$(PACKAGE)\""
+ LDADD = $(INTLLIBS) $(GNOME_LIBS) $(LIBTRANSLATE_LIBS) $(ASPELL_LIBS)
+ 
++gnome_translate_LDFLAGS = -export-dynamic
++
+ EXTRA_DIST = eggmarshalers.list
+ MAINTAINERCLEANFILES = $(BUILT_SOURCES)
+ 

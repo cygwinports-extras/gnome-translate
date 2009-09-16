@@ -1,5 +1,5 @@
 category: Gnome Text
-requires: eel2 GConf2 gdk-pixbuf2 glib2 gnome-vfs2 gtk2-x11 libaspell15 libglade2 libgnome2 libgnomeui2 libintl8 libpopt0 libtranslate libxml2
+requires: GConf2 libaspell15 libeel2_2 libgcc1 libgconf2_4 libgdk_pixbuf2.0_0 libglade2.0_0 libglib2.0_0 libgnome2_0 libgnomeui2_0 libgnomevfs2_0 libgtk2.0_0 libintl8 libpopt0 libtranslate0 libxml2
 sdesc: "GNOME natural language translator"
 ldesc: "GNOME Translate is a natural language translator. It can
 translate a text or web page between several natural
